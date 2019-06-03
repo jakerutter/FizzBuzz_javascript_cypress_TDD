@@ -1,10 +1,14 @@
 //fizzbuzz tests
 
 describe('Calling fizzbuzz first time', function(){
-    it('call fizzbuzz and it should return the number passed into it', function(){
+    it('call fizzbuzz passing a number not divisible by 3 or 5 it will return same number', function(){
         cy
         .fizzbuzz(2)
         .should('eq', 2)
+        .fizzbuzz(37)
+        .should('eq', 37)
+        .fizzbuzz(103)
+        .should('eq', 103)
     });
 });
 
