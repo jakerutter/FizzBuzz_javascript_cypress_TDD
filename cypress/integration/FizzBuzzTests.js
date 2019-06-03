@@ -19,3 +19,15 @@ describe('Calling fizzbuzz expecting fizz', function(){
         .should('eq', 'fizz')
     });
 });
+
+    describe('Calling fizzbuzz expecting buzz', function(){
+        it('call fizzbuzz and it should "buzz" for multiples of five', function(){
+            cy
+            .fizzbuzz(20)
+            .should('eq', 'buzz')
+            .fizzbuzz(55)
+            .should('eq', 'buzz')
+            .fizzbuzz(230)
+            .should('eq', 'buzz')
+    });
+});
