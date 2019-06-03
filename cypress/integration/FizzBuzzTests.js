@@ -7,3 +7,15 @@ describe('Calling fizzbuzz first time', function(){
         .should('eq', 2)
     });
 });
+
+describe('Calling fizzbuzz expecting fizz', function(){
+    it('call fizzbuzz and it should "fizz" for multiples of three', function(){
+        cy
+        .fizzbuzz(9)
+        .should('eq', 'fizz')
+        .fizzbuzz(39)
+        .should('eq', 'fizz')
+        .fizzbuzz(303)
+        .should('eq', 'fizz')
+    });
+});

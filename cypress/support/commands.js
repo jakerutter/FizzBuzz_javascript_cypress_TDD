@@ -24,4 +24,9 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('fizzbuzz', (a) => { return a });
+Cypress.Commands.add('fizzbuzz', function(number){
+    if (number % 3 == 0){
+        return "fizz";
+    }
+    return number;
+});
