@@ -31,3 +31,15 @@ describe('Calling fizzbuzz expecting fizz', function(){
             .should('eq', 'buzz')
     });
 });
+
+describe('Calling fizzbuzz expecting fizzBuzz', function(){
+    it('call fizzbuzz and it should "fizzBuzz" for multiples of three AND five', function(){
+        cy
+        .fizzbuzz(15)
+        .should('eq', 'fizzBuzz')
+        .fizzbuzz(45)
+        .should('eq', 'fizzBuzz')
+        .fizzbuzz(225)
+        .should('eq', 'fizzBuzz')
+});
+});

@@ -25,6 +25,9 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('fizzbuzz', function(number){
+    if(number % 3 == 0 && number % 5 == 0){
+        return "fizzBuzz";
+    }
     if (number % 3 == 0){
         return "fizz";
     }
